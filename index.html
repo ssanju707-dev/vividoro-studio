@@ -6,6 +6,21 @@
 <title>Vividoro — Websites, motion & brand design</title>
 <meta name="description" content="Vividoro is a fast, AI-powered design studio. Websites, motion graphics, brand identity and social content, delivered in days.">
 <link rel="icon" href="assets/mark.svg">
+<link rel="canonical" href="https://vividoro.in/">
+<meta name="theme-color" content="#0E0B1A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vividoro">
+<meta property="og:title" content="Vividoro — Websites, motion & brand design">
+<meta property="og:description" content="A fast design studio. Websites, motion graphics, brand identity and social content, delivered in days.">
+<meta property="og:url" content="https://vividoro.in/">
+<meta property="og:image" content="https://vividoro.in/assets/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vividoro — Websites, motion & brand design">
+<meta name="twitter:description" content="Bold design, delivered in days.">
+<meta name="twitter:image" content="https://vividoro.in/assets/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Vividoro","url":"https://vividoro.in/","logo":"https://vividoro.in/assets/avatar.png","image":"https://vividoro.in/assets/og.png","description":"Design studio for websites, motion graphics, brand identity and social content.","sameAs":["https://instagram.com/vividoro.studio"],"priceRange":"$179-$899"}</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
@@ -69,12 +84,23 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .piece figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 20px 16px;background:linear-gradient(transparent,rgba(14,11,26,.9));display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 12px;font-family:"Space Grotesk",sans-serif}
 .piece figcaption b{font-size:19px}@media(max-width:700px){.piece figcaption{padding:36px 14px 12px}.piece figcaption b{font-size:16px}.piece figcaption span{font-size:12px}}.piece figcaption span{font:400 13px Inter;color:#d6d0ee}
 .ico svg{width:100%;height:100%;display:block}
+
+.pk{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.pkg{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;position:relative}
+.pkg.hot{border-color:var(--b);box-shadow:0 0 0 1px var(--b),0 20px 50px rgba(123,92,255,.18)}
+.pkg .badge{position:absolute;top:-12px;left:24px;background:var(--grad);color:#fff;font:600 12px Inter;padding:4px 12px;border-radius:999px;letter-spacing:.06em;text-transform:uppercase}
+.pkg h3{font-size:21px}.pkg .pr{font:700 42px "Space Grotesk";letter-spacing:-.04em;margin:10px 0 4px}.pkg .pr small{font:400 15px Inter;color:var(--mute);letter-spacing:0}
+.pkg ul{list-style:none;padding:0;margin:14px 0 22px;color:var(--mute);font-size:15px;line-height:1.9}
+.pkg li:before{content:"\2713";color:#6ee7a8;margin-right:10px}
+.pkg .btn{margin-top:auto;text-align:center;padding:12px 20px}.pkg .btn.ghost{margin-left:0}
+.offer{margin-top:26px;padding:18px 22px;border-radius:16px;border:1px dashed var(--b);color:var(--text);background:rgba(123,92,255,.08);font-size:15px}
+.offer b{color:#ff8aa0}
 </style>
 </head>
 <body>
 <nav><div class="wrap">
   <a href="#" class="logo">vividor<i></i></a>
-  <ul><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li></ul>
+  <ul><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#packages">Pricing</a></li><li><a href="#process">Process</a></li></ul>
   <a href="#contact" class="btn">Start a project</a>
 </div></nav>
 
@@ -108,6 +134,20 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <figure class="piece"><img src="assets/work/summit-co.png" alt="Concept website and social posts for an outdoor gear brand" loading="lazy" width="1200" height="900"><figcaption><b>Summit Co.</b><span>Website · Social</span></figcaption></figure>
   </div>
   <p class="note">These are concept projects for fictional brands, made to show our range. Real client work will be added here as it launches.</p>
+</div></section>
+
+<section id="packages"><div class="wrap">
+  <h2>Simple <span>pricing</span></h2>
+  <p class="sub">Clear, upfront prices. Start with one package or combine them. Prices are in US dollars.</p>
+  <div class="pk">
+    <div class="pkg"><h3>Landing page</h3><div class="pr">$399</div><small style="color:var(--mute)">about 3 days</small><ul><li>1 page, mobile-ready</li><li>Contact form</li><li>Basic SEO</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
+    <div class="pkg hot"><span class="badge">Most popular</span><h3>Business website</h3><div class="pr">$899</div><small style="color:var(--mute)">about 7 days</small><ul><li>Up to 5 pages</li><li>Booking or contact form</li><li>Basic SEO</li></ul><a href="#contact" class="btn">Get a quote</a></div>
+    <div class="pkg"><h3>Brand kit</h3><div class="pr">$299</div><small style="color:var(--mute)">about 5 days</small><ul><li>Logo</li><li>Colours and fonts</li><li>3 social templates</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
+    <div class="pkg"><h3>Social content pack</h3><div class="pr">$249</div><small style="color:var(--mute)">about 5 days</small><ul><li>12 posts or carousels</li><li>On-brand design</li><li>Captions included</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
+    <div class="pkg"><h3>Motion reel</h3><div class="pr">$179</div><small style="color:var(--mute)">about 3 days</small><ul><li>15 to 30 seconds</li><li>Logo animation or promo</li><li>Ready for Instagram</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
+    <div class="pkg"><h3>Monthly care</h3><div class="pr">$149<small> / month</small></div><small style="color:var(--mute)">optional</small><ul><li>Site updates</li><li>4 social posts</li><li>Priority replies</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
+  </div>
+  <div class="offer"><b>Launch offer:</b> 20% off for our first 3 clients, in exchange for a short testimonial. 50% to start, 50% on delivery, 2 rounds of revisions included.</div>
 </div></section>
 
 <section id="process"><div class="wrap">
