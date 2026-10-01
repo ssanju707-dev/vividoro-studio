@@ -66,8 +66,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .piece{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--panel)}
 .piece img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
 .piece:hover img{transform:scale(1.04)}
-.piece figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 20px 18px;background:linear-gradient(transparent,rgba(14,11,26,.88));display:flex;justify-content:space-between;align-items:baseline;font-family:"Space Grotesk",sans-serif}
-.piece figcaption b{font-size:20px}.piece figcaption span{font:400 13px Inter;color:#d6d0ee}
+.piece figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 20px 16px;background:linear-gradient(transparent,rgba(14,11,26,.9));display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 12px;font-family:"Space Grotesk",sans-serif}
+.piece figcaption b{font-size:19px}@media(max-width:700px){.piece figcaption{padding:36px 14px 12px}.piece figcaption b{font-size:16px}.piece figcaption span{font-size:12px}}.piece figcaption span{font:400 13px Inter;color:#d6d0ee}
 .ico svg{width:100%;height:100%;display:block}
 </style>
 </head>
