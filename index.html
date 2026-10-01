@@ -96,6 +96,7 @@ form{display:grid;gap:12px;max-width:480px;margin:0 auto;text-align:left}input,t
 footer{border-top:1px solid var(--line);padding:46px 0 40px;color:var(--mute);font-size:14.5px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}footer a:hover{color:var(--text)}
 .fab{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25D366;color:#06210f;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(0,0,0,.45);animation:pulse 2.6s infinite}.fab svg{width:33px;height:33px}
 @keyframes pulse{0%{box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,0)}}
+.cur{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px;margin:-22px 0 32px;background:var(--panel)}.cur button{background:none;border:0;color:var(--mute);font:600 14px Inter;padding:9px 20px;border-radius:999px;cursor:pointer}.cur button.on{background:var(--grad);color:#fff}
 /* reveal */
 .rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
@@ -145,14 +146,14 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;color:var(--mute);fo
 
 <section id="packages" class="sec" style="padding-top:0"><div class="wrap">
   <h2>Simple <span>pricing</span></h2>
-  <p class="sub">Clear, upfront prices. Start with one package or combine them. Prices are in US dollars.</p>
+  <p class="sub">Clear, upfront prices. Start with one package or combine them.</p><div class="cur" role="group" aria-label="Currency"><button type="button" data-c="inr">₹ INR</button><button type="button" data-c="usd">$ USD</button></div>
   <div class="pk">
-    <div class="pkg"><h3>Landing page</h3><div class="pr">$399</div><small style="color:var(--mute)">about 3 days</small><ul><li>1 page, mobile-ready</li><li>Contact form</li><li>Basic SEO</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
-    <div class="pkg hot"><span class="badge">Most popular</span><h3>Business website</h3><div class="pr">$899</div><small style="color:var(--mute)">about 7 days</small><ul><li>Up to 5 pages</li><li>Booking or contact form</li><li>Basic SEO</li></ul><a href="#contact" class="btn">Get a quote</a></div>
-    <div class="pkg"><h3>Brand kit</h3><div class="pr">$299</div><small style="color:var(--mute)">about 5 days</small><ul><li>Logo</li><li>Colours and fonts</li><li>3 social templates</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
-    <div class="pkg"><h3>Social content pack</h3><div class="pr">$249</div><small style="color:var(--mute)">about 5 days</small><ul><li>12 posts or carousels</li><li>On-brand design</li><li>Captions included</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
-    <div class="pkg"><h3>Motion reel</h3><div class="pr">$179</div><small style="color:var(--mute)">about 3 days</small><ul><li>15 to 30 seconds</li><li>Logo animation or promo</li><li>Ready for Instagram</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
-    <div class="pkg"><h3>Monthly care</h3><div class="pr">$149<small> / month</small></div><small style="color:var(--mute)">optional</small><ul><li>Site updates</li><li>4 social posts</li><li>Priority replies</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
+    <div class="pkg"><h3>Landing page</h3><div class="pr"><span data-usd="$399" data-inr="₹9,999">$399</span></div><small style="color:var(--mute)">about 3 days</small><ul><li>1 page, mobile-ready</li><li>Contact form</li><li>Basic SEO</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
+    <div class="pkg hot"><span class="badge">Most popular</span><h3>Business website</h3><div class="pr"><span data-usd="$899" data-inr="₹18,999">$899</span></div><small style="color:var(--mute)">about 7 days</small><ul><li>Up to 5 pages</li><li>Booking or contact form</li><li>Basic SEO</li></ul><a href="#contact" class="btn">Get a quote</a></div>
+    <div class="pkg"><h3>Brand kit</h3><div class="pr"><span data-usd="$299" data-inr="₹7,999">$299</span></div><small style="color:var(--mute)">about 5 days</small><ul><li>Logo</li><li>Colours and fonts</li><li>3 social templates</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
+    <div class="pkg"><h3>Social content pack</h3><div class="pr"><span data-usd="$249" data-inr="₹6,999">$249</span></div><small style="color:var(--mute)">about 5 days</small><ul><li>12 posts or carousels</li><li>On-brand design</li><li>Captions included</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
+    <div class="pkg"><h3>Motion reel</h3><div class="pr"><span data-usd="$179" data-inr="₹4,999">$179</span></div><small style="color:var(--mute)">about 3 days</small><ul><li>15 to 30 seconds</li><li>Logo animation or promo</li><li>Ready for Instagram</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
+    <div class="pkg"><h3>Monthly care</h3><div class="pr"><span data-usd="$149" data-inr="₹3,999">$149</span><small> / month</small></div><small style="color:var(--mute)">optional</small><ul><li>Site updates</li><li>4 social posts</li><li>Priority replies</li></ul><a href="#contact" class="btn ghost">Get a quote</a></div>
   </div>
   <div class="offer"><b>Launch offer:</b> 20% off for our first 3 clients, in exchange for a short testimonial. 50% to start, 50% on delivery, 2 rounds of revisions included.</div>
 </div></section>
@@ -178,7 +179,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;color:var(--mute);fo
   <p class="sub">The things people ask us most.</p>
   <div class="faq">
     <details><summary>How fast can you deliver?</summary><p>Landing pages take about 3 days and business websites about 7. Brand kits and social packs take about 5, and motion reels about 3. Timelines start once we have your deposit and content.</p></details>
-    <details><summary>How much does it cost, and how do I pay?</summary><p>Packages start at $179 and are listed above. You pay 50% to start and 50% on delivery, before final files are released or the site goes live.</p></details>
+    <details><summary>How much does it cost, and how do I pay?</summary><p>Packages start at <span data-usd="$179" data-inr="₹4,999">$179</span> and are listed above. You pay 50% to start and 50% on delivery, before final files are released or the site goes live.</p></details>
     <details><summary>Do I own the finished work?</summary><p>Yes. Once you've paid in full, the final deliverables are yours. We may show the work in our portfolio unless you ask us not to.</p></details>
     <details><summary>How many revisions are included?</summary><p>Two rounds, on the agreed scope. Extra rounds or new features are quoted separately.</p></details>
     <details><summary>Do you use AI?</summary><p>Yes. We use AI-assisted tools to work quickly, and a person reviews every layout, colour and word before you see it.</p></details>
@@ -207,6 +208,11 @@ footer{border-top:1px solid var(--line);padding:46px 0 40px;color:var(--mute);fo
 (function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
 if(location.search.includes("sent=1")){var m=document.getElementById("msg");if(m)m.textContent="Thanks! We got your message and will reply within a day."}
+// currency
+var cur=null;try{cur=localStorage.getItem('vivCur')}catch(e){}
+if(!cur){var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}cur=(/Kolkata|Calcutta/.test(tz)||/-IN/.test(navigator.language||''))?'inr':'usd'}
+function setCur(c){cur=c;document.querySelectorAll('[data-usd]').forEach(function(el){el.textContent=el.dataset[c]});document.querySelectorAll('.cur button').forEach(function(b){b.classList.toggle('on',b.dataset.c===c)});try{localStorage.setItem('vivCur',c)}catch(e){}}
+document.querySelectorAll('.cur button').forEach(function(b){b.addEventListener('click',function(){setCur(b.dataset.c)})});setCur(cur);
 // reveal
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
