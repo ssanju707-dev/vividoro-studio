@@ -78,11 +78,13 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @media(max-width:700px){nav ul{display:none}nav .btn{padding:9px 16px;font-size:14px}.hero{padding:70px 0 60px}.hero::before{right:-300px}.btn.ghost{margin:12px 0 0}}
 
-.piece{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--panel)}
-.piece img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
-.piece:hover img{transform:scale(1.04)}
-.piece figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 20px 16px;background:linear-gradient(transparent,rgba(14,11,26,.9));display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 12px;font-family:"Space Grotesk",sans-serif}
-.piece figcaption b{font-size:19px}@media(max-width:700px){.piece figcaption{padding:36px 14px 12px}.piece figcaption b{font-size:16px}.piece figcaption span{font-size:12px}}.piece figcaption span{font:400 13px Inter;color:#d6d0ee}
+.piece{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+.piece a{display:block;overflow:hidden}
+.piece img{width:100%;height:auto;display:block;transition:transform .5s}
+.piece:hover img{transform:scale(1.03)}
+.piece figcaption{padding:14px 18px 16px;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;font-family:"Space Grotesk",sans-serif}
+.piece figcaption b{font-size:19px}.piece figcaption span{font:400 13px Inter;color:var(--mute)}
+.piece .vw{margin-left:auto;font:500 13px Inter;color:#b9a8ff}.piece .vw:hover{color:#fff}
 .ico svg{width:100%;height:100%;display:block}
 
 .pk{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
@@ -126,12 +128,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <h2>Selected <span>work</span></h2>
   <p class="sub">Concept projects while we onboard our first clients. Partner studios and freelancers will be featured here too.</p>
   <div class="work">
-    <figure class="piece"><img src="assets/work/bloom-cafe-v5.jpg" alt="Concept website for a neighbourhood café, shown on desktop and mobile" loading="lazy" width="1600" height="1200"><figcaption><b>Bloom Café</b><span>Website · Brand</span></figcaption></figure>
-    <figure class="piece"><img src="assets/work/orbit-fitness-v5.jpg" alt="Concept website and app screens for a fitness challenge brand" loading="lazy" width="1600" height="1200"><figcaption><b>Orbit Fitness</b><span>Website · App</span></figcaption></figure>
-    <figure class="piece"><img src="assets/work/northwind-studio-v5.jpg" alt="Concept website for an architecture and interiors studio" loading="lazy" width="1600" height="1200"><figcaption><b>Northwind Studio</b><span>Website</span></figcaption></figure>
-    <figure class="piece"><img src="assets/work/halo-skincare-v4.jpg" alt="Concept brand identity and packaging for a skincare line" loading="lazy" width="1600" height="1200"><figcaption><b>Halo Skincare</b><span>Brand identity</span></figcaption></figure>
-    <figure class="piece"><img src="assets/work/pulse-records-v3.jpg" alt="Concept website and player for an independent record label" loading="lazy" width="1600" height="1200"><figcaption><b>Pulse Records</b><span>Website · Music</span></figcaption></figure>
-    <figure class="piece"><img src="assets/work/summit-co-v5.jpg" alt="Concept website and social post for an outdoor gear brand" loading="lazy" width="1600" height="1200"><figcaption><b>Summit Co.</b><span>Website · Social</span></figcaption></figure>
+    <figure class="piece"><a href="case/bloom-cafe/" aria-label="View the Bloom Café case study"><img src="assets/work/bloom-cafe-v5.jpg" alt="Bloom Café concept, website · brand" loading="lazy" width="1600" height="1200"></a><figcaption><b>Bloom Café</b><span>Website · Brand</span><a class="vw" href="case/bloom-cafe/">View case study &rarr;</a></figcaption></figure>
+    <figure class="piece"><a href="case/orbit-fitness/" aria-label="View the Orbit Fitness case study"><img src="assets/work/orbit-fitness-v5.jpg" alt="Orbit Fitness concept, website · app" loading="lazy" width="1600" height="1200"></a><figcaption><b>Orbit Fitness</b><span>Website · App</span><a class="vw" href="case/orbit-fitness/">View case study &rarr;</a></figcaption></figure>
+    <figure class="piece"><a href="case/northwind-studio/" aria-label="View the Northwind Studio case study"><img src="assets/work/northwind-studio-v5.jpg" alt="Northwind Studio concept, website" loading="lazy" width="1600" height="1200"></a><figcaption><b>Northwind Studio</b><span>Website</span><a class="vw" href="case/northwind-studio/">View case study &rarr;</a></figcaption></figure>
+    <figure class="piece"><a href="case/halo-skincare/" aria-label="View the Halo Skincare case study"><img src="assets/work/halo-skincare-v4.jpg" alt="Halo Skincare concept, brand identity" loading="lazy" width="1600" height="1200"></a><figcaption><b>Halo Skincare</b><span>Brand identity</span><a class="vw" href="case/halo-skincare/">View case study &rarr;</a></figcaption></figure>
+    <figure class="piece"><a href="case/pulse-records/" aria-label="View the Pulse Records case study"><img src="assets/work/pulse-records-v3.jpg" alt="Pulse Records concept, website · music" loading="lazy" width="1600" height="1200"></a><figcaption><b>Pulse Records</b><span>Website · Music</span><a class="vw" href="case/pulse-records/">View case study &rarr;</a></figcaption></figure>
+    <figure class="piece"><a href="case/summit-co/" aria-label="View the Summit Co. case study"><img src="assets/work/summit-co-v5.jpg" alt="Summit Co. concept, website · social" loading="lazy" width="1600" height="1200"></a><figcaption><b>Summit Co.</b><span>Website · Social</span><a class="vw" href="case/summit-co/">View case study &rarr;</a></figcaption></figure>
   </div>
   <p class="note">These are concept projects for fictional brands, made to show our range. Photography by Unsplash contributors. Real client work will be added here as it launches.</p>
 </div></section>
