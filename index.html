@@ -116,8 +116,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <section id="contact"><div class="wrap"><div class="cta">
   <h2>Let's make something <span>vivid</span></h2>
-  <p>Tell us about your project and we'll reply within a day.</p>
-  <form action="mailto:hello@vividoro.com" method="post" enctype="text/plain">
+  <p id="msg">Tell us about your project and we'll reply within a day.</p>
+  <form action="https://formsubmit.co/illumedezign@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Vividoro enquiry">
+    <input type="hidden" name="_next" value="https://ssanju707-dev.github.io/vividoro/?sent=1#contact">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
     <input name="name" placeholder="Your name" required>
     <input name="email" type="email" placeholder="Email" required>
     <textarea name="project" rows="4" placeholder="What do you need?"></textarea>
@@ -126,5 +130,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 </div></div></section>
 
 <footer><div class="wrap"><span>© 2026 Vividoro</span><span>Instagram · <a href="https://instagram.com/vividoro.studio">@vividoro.studio</a></span></div></footer>
+<script>if(location.search.includes("sent=1"))document.getElementById("msg").textContent="Thanks! We got your message and will reply within a day.";</script>
 </body>
 </html>
