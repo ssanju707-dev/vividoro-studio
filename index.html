@@ -40,7 +40,7 @@ h2{font-size:clamp(32px,5vw,52px);margin-bottom:14px}
 .card:hover{border-color:var(--b);transform:translateY(-4px)}
 .card h3{font-size:22px;margin:14px 0 8px}
 .card p{color:var(--mute);font-size:15px}
-.ico{width:44px;height:44px;border-radius:12px;background:var(--grad)}
+.ico{width:48px;height:48px;border-radius:12px;background:var(--grad);padding:11px;color:#fff}
 .work{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .thumb{aspect-ratio:4/3;border-radius:20px;border:1px solid var(--line);display:flex;align-items:flex-end;padding:22px;font-family:"Space Grotesk";font-weight:700;font-size:24px;position:relative;overflow:hidden}
 .thumb small{display:block;font:400 13px Inter;opacity:.8;margin-top:2px}
@@ -62,6 +62,13 @@ button.btn{border:0;cursor:pointer;font:inherit;font-weight:500}
 footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @media(max-width:700px){nav ul{display:none}nav .btn{padding:9px 16px;font-size:14px}.hero{padding:70px 0 60px}.hero::before{right:-300px}.btn.ghost{margin:12px 0 0}}
+
+.piece{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--panel)}
+.piece img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.piece:hover img{transform:scale(1.04)}
+.piece figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 20px 18px;background:linear-gradient(transparent,rgba(14,11,26,.88));display:flex;justify-content:space-between;align-items:baseline;font-family:"Space Grotesk",sans-serif}
+.piece figcaption b{font-size:20px}.piece figcaption span{font:400 13px Inter;color:#d6d0ee}
+.ico svg{width:100%;height:100%;display:block}
 </style>
 </head>
 <body>
@@ -82,10 +89,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <h2>What we <span>make</span></h2>
   <p class="sub">One studio for everything visual. If it can be designed, we can ship it.</p>
   <div class="grid">
-    <div class="card"><div class="ico"></div><h3>Websites</h3><p>Landing pages and full sites that load fast, look sharp and convert. Live in as little as 72 hours.</p></div>
-    <div class="card"><div class="ico"></div><h3>Motion graphics</h3><p>Promo videos, logo animations and social reels that stop the scroll.</p></div>
-    <div class="card"><div class="ico"></div><h3>Brand identity</h3><p>Logo, colours, type and templates, a complete kit your business can actually use.</p></div>
-    <div class="card"><div class="ico"></div><h3>Social content</h3><p>A month of on-brand posts, carousels and reels, ready to publish.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8M12 18v3"/></svg></div><h3>Websites</h3><p>Landing pages and full sites that load fast, look sharp and convert. Live in as little as 72 hours.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/></svg></div><h3>Motion graphics</h3><p>Promo videos, logo animations and social reels that stop the scroll.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg></div><h3>Brand identity</h3><p>Logo, colours, type and templates, a complete kit your business can actually use.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></div><h3>Social content</h3><p>A month of on-brand posts, carousels and reels, ready to publish.</p></div>
   </div>
 </div></section>
 
@@ -93,14 +100,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <h2>Selected <span>work</span></h2>
   <p class="sub">Concept projects while we onboard our first clients. Partner studios and freelancers will be featured here too.</p>
   <div class="work">
-    <div class="thumb t1"><div>Bloom Café<small>Website · Brand</small></div></div>
-    <div class="thumb t2"><div>Orbit Fitness<small>Motion · Social</small></div></div>
-    <div class="thumb t3"><div>Northwind Studio<small>Website</small></div></div>
-    <div class="thumb t4"><div>Halo Skincare<small>Brand identity</small></div></div>
-    <div class="thumb t5"><div>Pulse Records<small>Motion graphics</small></div></div>
-    <div class="thumb t6"><div>Summit Co.<small>Website · Social</small></div></div>
+    <figure class="piece"><img src="assets/work/bloom-cafe.png" alt="Concept website for a neighbourhood café" loading="lazy" width="1200" height="900"><figcaption><b>Bloom Café</b><span>Website · Brand</span></figcaption></figure>
+    <figure class="piece"><img src="assets/work/orbit-fitness.png" alt="Concept social and motion design for a fitness app" loading="lazy" width="1200" height="900"><figcaption><b>Orbit Fitness</b><span>Motion · Social</span></figcaption></figure>
+    <figure class="piece"><img src="assets/work/northwind-studio.png" alt="Concept website for an architecture studio" loading="lazy" width="1200" height="900"><figcaption><b>Northwind Studio</b><span>Website</span></figcaption></figure>
+    <figure class="piece"><img src="assets/work/halo-skincare.png" alt="Concept brand identity for a skincare line" loading="lazy" width="1200" height="900"><figcaption><b>Halo Skincare</b><span>Brand identity</span></figcaption></figure>
+    <figure class="piece"><img src="assets/work/pulse-records.png" alt="Concept motion artwork for an independent music label" loading="lazy" width="1200" height="900"><figcaption><b>Pulse Records</b><span>Motion graphics</span></figcaption></figure>
+    <figure class="piece"><img src="assets/work/summit-co.png" alt="Concept website and social posts for an outdoor gear brand" loading="lazy" width="1200" height="900"><figcaption><b>Summit Co.</b><span>Website · Social</span></figcaption></figure>
   </div>
-  <p class="note">Concept work for fictional brands. Real client projects coming soon.</p>
+  <p class="note">These are concept projects for fictional brands, made to show our range. Real client work will be added here as it launches.</p>
 </div></section>
 
 <section id="process"><div class="wrap">
