@@ -147,6 +147,21 @@ nav ul a{position:relative;transition:color .25s}nav ul a:after{content:"";posit
 .fab{box-shadow:0 14px 34px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.12)}
 footer{color:#8f89ad;border-top-color:rgba(255,255,255,.07)}
 img{-webkit-user-drag:none}
+/* director's pass */
+@media(min-width:981px){.sec{padding:116px 0}.rot{display:grid;width:fit-content}}
+.hero .stack,.intro{perspective:1200px}
+.intro:after{content:"";position:absolute;left:50%;bottom:-6px;width:220px;height:26px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(0,0,0,.55),transparent 70%);filter:blur(8px);z-index:0}
+.tile{box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 24px 60px rgba(0,0,0,.35);transition:border-color .3s,transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.tile:hover{transform:translateY(-6px);border-color:rgba(123,92,255,.55);box-shadow:0 34px 80px rgba(0,0,0,.5),0 0 60px rgba(123,92,255,.14)}
+.tile .cap em{transition:transform .3s}.tile:hover .cap em{transform:translateX(5px)}
+.tile .cap b{letter-spacing:-.02em}
+.statement{letter-spacing:-.04em}
+.faq details{transition:border-color .3s,background .3s}.faq details:hover{border-color:rgba(123,92,255,.4)}
+.btn:active{transform:translateY(0) scale(.98)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #a893ff;outline-offset:3px;border-radius:12px}
+input,textarea{transition:border-color .25s,box-shadow .25s}input:focus,textarea:focus{border-color:rgba(123,92,255,.7)!important;box-shadow:0 0 0 4px rgba(123,92,255,.16);outline:0}
+footer{padding-top:34px;padding-bottom:34px}
+@media(max-width:700px){.phone{width:260px;height:540px;border-radius:46px;transform:rotate(2deg)}.phone:before{border-radius:42px}.phone:after{box-shadow:-260px 40px 0 0 #8d86a8,-260px -10px 0 0 #8d86a8}.phone .scr{border-radius:34px}.intro{min-height:500px}.hero{padding-top:64px}}
 
 .fd{display:grid;grid-template-columns:150px 1fr;gap:34px;align-items:center;border:1px solid var(--line);border-radius:28px;padding:40px;background:linear-gradient(135deg,#15112a,#100c1f)}.fd .av.ph svg{display:none}.fd .av.ph{padding:0;overflow:hidden}.fd .av img{width:100%;height:100%;object-fit:cover}.fd .av{width:150px;height:150px;border-radius:50%;background:#0E0B1A;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:28px}.fd p{max-width:640px}
 @media(max-width:700px){.fd{grid-template-columns:1fr;padding:28px 22px;gap:20px}.fd .av{width:96px;height:96px;padding:18px}}
