@@ -184,7 +184,7 @@ details p{margin-top:12px;color:var(--mut);font-size:15.5px}
 
 <section style="padding-top:0"><div class="wrap">
   <div class="ph rv">
-    <figure><img src="img/consult.jpg" alt="A doctor talking with a patient in a consulting room" loading="lazy"><figcaption><b>A thorough explanation</b><span>Every consultation ends with a bespoke treatment plan.</span></figcaption></figure>
+    <figure><img src="img/consult.jpg" alt="A doctor explaining a treatment plan to a patient" loading="lazy"><figcaption><b>A thorough explanation</b><span>Every consultation ends with a bespoke treatment plan.</span></figcaption></figure>
     <figure><img src="img/aesthetic.jpg" alt="A patient receiving a facial skin treatment" loading="lazy"><figcaption><b>Aesthetic care</b><span>Free consultation first.</span></figcaption></figure>
     <figure><img src="img/calm.jpg" alt="A calm, softly lit clinic corridor" loading="lazy"><figcaption><b>Calm, unhurried</b><span>Looking after your skin.</span></figcaption></figure>
   </div>
@@ -220,7 +220,7 @@ details p{margin-top:12px;color:var(--mut);font-size:15.5px}
   <div><span class="eyebrow">Contact</span><h2 class="serif" style="font-size:clamp(34px,4vw,54px);line-height:1.06;margin:14px 0 24px">The care you deserve.</h2>
     <p style="color:var(--mut);margin-bottom:24px">Send an enquiry by email or call for an appointment.</p>
     <div class="hrs"><div><span>Monday to Friday</span><b>9:00am to 6:00pm</b></div><div><span>Saturday</span><b>9:00am to 1:00pm</b></div><div><span>Phone</span><b><a href="tel:01217690999">0121 769 0999</a></b></div><div><span>Email</span><b><a href="mailto:enquiries@skin-docs.com">enquiries@skin-docs.com</a></b></div></div></div>
-  <form action="mailto:enquiries@skin-docs.com" method="post" enctype="text/plain"><input placeholder="Name"><input placeholder="Email"><input placeholder="Phone"><input placeholder="Best time to contact you"><textarea rows="4" placeholder="Tell us about your skin concern"></textarea><button class="btn" type="button">Send enquiry</button></form>
+  <form id="enq" action="mailto:enquiries@skin-docs.com" onsubmit="return false"><input id="f1" placeholder="Name" autocomplete="name"><input id="f2" placeholder="Email" type="email" autocomplete="email"><input id="f3" placeholder="Phone" type="tel" autocomplete="tel"><input id="f4" placeholder="Best time to contact you"><textarea id="f5" rows="4" placeholder="Tell us about your skin concern"></textarea><button class="btn" type="button" id="send">Send enquiry</button></form>
 </div></section>
 
 <footer><div class="wrap"><span>© 2026 Dr Christos Kasparis · Consultant Dermatologist, Birmingham</span><span>Homepage concept by <b>Vividoro</b></span></div></footer>
@@ -228,6 +228,11 @@ details p{margin-top:12px;color:var(--mut);font-size:15.5px}
 <script>
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.card,.col,.sh,.step,.faq,.creds,.cond,.ph').forEach(el=>{el.classList.add('rv');io.observe(el)});
+</script>
+<script>
+document.getElementById('send').addEventListener('click',()=>{const v=i=>document.getElementById(i).value.trim();
+const body=`Name: ${v('f1')}\nEmail: ${v('f2')}\nPhone: ${v('f3')}\nBest time to contact: ${v('f4')}\n\n${v('f5')}`;
+location.href='mailto:enquiries@skin-docs.com?subject='+encodeURIComponent('Appointment enquiry')+'&body='+encodeURIComponent(body)});
 </script>
 </body>
 </html>
