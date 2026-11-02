@@ -97,6 +97,18 @@ details p{margin-top:12px;color:var(--mut);font-size:15.5px}
 .ph figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:24px 26px;color:#fff}.ph figcaption b{display:block;font:350 28px/1.1 var(--serif)}.ph figcaption span{font-size:14px;opacity:.88}
 .ph .note{font-size:12.5px;color:var(--mut);margin-top:14px}
 @media(max-width:980px){.ph{grid-template-columns:1fr}.ph figure{min-height:300px}}
+
+.hv{background:none!important;box-shadow:none!important;overflow:visible!important;display:block!important;aspect-ratio:auto;height:min(660px,100vw)}
+.hv:before,.hv:after{display:none!important}
+.hv .arch{position:absolute;border-radius:999px 999px 28px 28px}
+.hv .arch.back{left:2%;right:14%;top:5%;bottom:-3%;border:1.5px solid var(--gold);opacity:.7}
+.hv .arch.main{left:12%;right:4%;top:0;bottom:3%;overflow:hidden;background:var(--navy);box-shadow:0 44px 80px -44px rgba(20,24,92,.55)}
+.hv .arch.main img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.hv .arch.main:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,92,0) 55%,rgba(20,24,92,.28))}
+.hv .orb{position:absolute;left:0;bottom:10%;width:34%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:7px solid var(--bg);box-shadow:0 26px 50px -26px rgba(20,24,92,.55);z-index:1}
+.hv .orb img{width:100%;height:100%;object-fit:cover;object-position:40% 40%}
+.hv .chip.b{right:-2%;top:12%}.hv .chip.a{left:auto;right:6%;bottom:9%}
+@media(max-width:980px){.hv{height:520px}.hv .chip.b{right:0}}
 </style>
 </head>
 <body>
@@ -117,22 +129,10 @@ details p{margin-top:12px;color:var(--mut);font-size:15.5px}
     <div class="facts"><div><b>2008</b><span>practising in dermatology</span></div><div><b>MBChB, MRCP, FRCP</b><span>UK-trained consultant</span></div><div><b>Video</b><span>consultations available</span></div></div>
   </div>
   <div class="hv">
-    <svg class="art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-  <defs><radialGradient id="g1" cx="35%" cy="25%" r="80%"><stop offset="0" stop-color="#3a40b8"/><stop offset="1" stop-color="#14185C"/></radialGradient>
-  <radialGradient id="g2" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#F7F5F0" stop-opacity=".95"/><stop offset="1" stop-color="#cfd3ff" stop-opacity=".25"/></radialGradient></defs>
-  <rect width="400" height="500" fill="url(#g1)"/>
-  <g class="ring" opacity=".5" fill="none" stroke="#9aa0ff"><circle cx="200" cy="245" r="150" stroke-dasharray="2 8"/><circle cx="200" cy="245" r="190" stroke-dasharray="1 14"/></g>
-  <g class="float">
-    <circle cx="200" cy="245" r="112" fill="url(#g2)"/>
-    <circle cx="200" cy="245" r="112" fill="none" stroke="#fff" stroke-width="5" opacity=".9"/>
-    <circle cx="200" cy="245" r="84" fill="none" stroke="#14185C" stroke-opacity=".18"/>
-    <circle cx="200" cy="245" r="56" fill="none" stroke="#14185C" stroke-opacity=".18"/>
-    <path d="M118 245H282M200 163V327" stroke="#14185C" stroke-opacity=".14"/>
-    <circle cx="232" cy="222" r="9" fill="#7a4f3a" opacity=".85"/><circle cx="232" cy="222" r="15" fill="none" stroke="#D9A441" stroke-width="2" stroke-dasharray="3 4"/>
-    <path d="M306 331l50 62" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
-    <path d="M306 331l50 62" stroke="#D9A441" stroke-width="5" stroke-linecap="round" opacity=".0"/>
-  </g>
-</svg>
+    <div class="arch back"></div>
+    <div class="arch main"><img src="img/calm.jpg" alt="A calm, softly lit clinic corridor"></div>
+    <div class="orb"><img src="img/aesthetic.jpg" alt="A patient receiving a facial skin treatment"></div>
+    <div class="hair"></div>
     <div class="chip b"><span class="dot"></span><div><b>Video consultations</b><small>now available</small></div></div>
     <div class="chip a"><b>Free aesthetic consultation</b><small>30 minutes, tailored plan</small></div>
   </div>
